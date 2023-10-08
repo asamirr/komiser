@@ -42,9 +42,9 @@ jobs:
         uses: golangci/golangci-lint-action@v3
         with:
           version: latest
-          cache: false
+          skip-cache: true
           skip-pkg-cache: true
-          args: --verbose --timeout=2m
+          args: --verbose --timeout=3m
 
       - name: Install dependencies
         run: go mod download
